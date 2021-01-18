@@ -1,6 +1,7 @@
-from library import models
-
 """Configure tests for library api."""
+import pytest
+
+from library import models
 
 
 def add_users(db) -> None:
