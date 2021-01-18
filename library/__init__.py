@@ -90,7 +90,7 @@ def create_app(config) -> Flask:
             checkout.book_id = book_id
             checkout.user_id = user_id
             checkout.out_date = datetime.utcnow()
-            checkout.due_date = checkout.out_date + timedelta(days=13)
+            checkout.due_date = checkout.out_date + timedelta(days=days)
             checkout.save()
 
             response = jsonify({"due_date": checkout.due_date})
