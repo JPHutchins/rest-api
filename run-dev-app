@@ -1,0 +1,7 @@
+#!/bin/bash
+source venv/bin/activate
+export FLASK_CONFIG=DevConfig
+export FLASK_APP=library
+export FLASK_ENV=development
+export SECRET_KEY=dev
+python ./run.py
