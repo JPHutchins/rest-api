@@ -1,7 +1,7 @@
 # Library REST API
 An API for a library where users can checkout, return, and... destroy!?!? books.
 
-# Installation / Development
+## Installation / Development
 A development server can be run in a Python virtual environment.
 
 - `git clone https://github.com/JPHutchins/rest-api`
@@ -16,7 +16,7 @@ You can now run the development server with the script `./run-dev-app`.
 - The development server is on Flask default port 5000
 - The server is accessible from external hosts (host=0.0.0.0). You can change this behavior by removing or changing the host argument given to `app.run()` in run.py.
 
-# Interact
+## Interact
 With the development server running you can send requests from curl, an API tool, or a browser.
 
 The base url for every request will be `http://localhost:5000/library/v0.1`, eg. `http://localhost:5000/library/v0.1/checkouts`
@@ -34,7 +34,7 @@ When running in development mode the library comes prestocked with 4 users and 7
 - `GET /checkouts` - get the list of current checked out books with soonest due dates first
 - `DELETE /books/{book_id}` - remove a book from the library - this will also remove it from checkouts if it is checked out
 
-# JSON Responses
+## JSON Responses
 users:
 ```
 [
