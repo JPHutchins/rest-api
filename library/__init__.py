@@ -5,7 +5,6 @@ from datetime import datetime, timedelta
 from flask import Flask, jsonify
 
 from library import const, models
-from tests.conftest import add_books, add_users
 
 
 API_BASE_PATH = f"/{const.API_NAME}/{const.API_VERSION}"
@@ -24,6 +23,8 @@ def create_app(config) -> Flask:
         db.create_all()
 
         if TESTING:
+            from tests.conftest import add_books, add_users
+
             add_users(db)
             add_books(db)
 
