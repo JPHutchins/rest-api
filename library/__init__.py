@@ -162,7 +162,7 @@ def create_app(config) -> Flask:
                     "email": user.email,
                     "firstname": user.firstname,
                     "lastname": user.lastname,
-                    "uri": f"/users/{user.id}",
+                    "user_id": user.id,
                 }
                 for user in users
             ]
